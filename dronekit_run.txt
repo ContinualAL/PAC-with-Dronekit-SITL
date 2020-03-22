@@ -1,0 +1,1 @@
+dronekit-sitl copter --home=1.347661,103.688615,0,0
