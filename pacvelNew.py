@@ -82,12 +82,14 @@ class structures:
 
         #Upalm or defuzzyfication calc
         self.upalm=np.sum(np.multiply(psi,self.w))
-        self.upalm=limiter(self.upalm,0.2)
+        # self.upalm=limiter(self.upalm,0.2)
+        self.upalm=limiter(self.upalm,1)
         #Usrc calc
         sl=self.smcpar[0]*err+self.smcpar[1]*interr+self.smcpar[2]*derr
         #self.usrc=100*((2*sigmf(sl,4,0))-1)
-        self.usrc=limiter(sl,0.8) #Linear saturation
-        self.u=self.usrc-1.0*self.upalm
+        # self.usrc=limiter(sl,0.8) #Linear saturation
+        self.usrc=limiter(sl,1)
+        self.u=self.usrc-0.0*self.upalm
 
         #Rule Significance Calc
         self.miuxe+=(self.Xe-self.miuxe)/self.itr
