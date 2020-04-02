@@ -23,4 +23,6 @@ Then, you will get some states from your terminal as shown below: <br>
 `Serial port 0 on TCP port 5760` <br>
 `Starting sketch 'ArduCopter'` <br>
 `Starting SITL input` <br>
-`Waiting for connection ....` <br>
+`Waiting for connection ....`
+1. Please refer to the following link for more information about Dronekit installation:
+<https://dronekit-python.readthedocs.io/en/latest/develop/sitl_setup.html>
